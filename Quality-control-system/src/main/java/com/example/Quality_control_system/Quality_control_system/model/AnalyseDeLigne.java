@@ -11,7 +11,6 @@ public class AnalyseDeLigne {
     private Long id;
 
     private String name;
-    private String result;
 
     @ManyToOne
     @JoinColumn(name = "ligne_de_controle_id", nullable = false)
@@ -20,6 +19,10 @@ public class AnalyseDeLigne {
     @ManyToOne
     @JoinColumn(name = "unite_de_mesure_id", nullable = false)
     private UniteDeMesure uniteDeMesure;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "parametre_analyse_id", referencedColumnName = "id")
+    private ParametreAnalyse parametreAnalyse;
 
 
     public Long getId() {
@@ -36,14 +39,6 @@ public class AnalyseDeLigne {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getResult() {
-        return result;
-    }
-
-    public void setResult(String result) {
-        this.result = result;
     }
 
     public LigneDeControle getLigneDeControle() {

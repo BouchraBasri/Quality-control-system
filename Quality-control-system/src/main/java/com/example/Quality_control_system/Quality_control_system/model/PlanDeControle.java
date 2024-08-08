@@ -1,6 +1,8 @@
 package com.example.Quality_control_system.Quality_control_system.model;
 
 import jakarta.persistence.*;
+
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -11,16 +13,15 @@ public class PlanDeControle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-
+    private String PCname;
+    private LocalDate startDate;
+    private LocalDate endDate;
     @ManyToOne
     @JoinColumn(name = "produit_id", nullable = false)
     private Produit produit;
 
     @OneToMany(mappedBy = "planDeControle", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<LigneDeControle> ligneDeControles;
-
-    // Getters and setters...
 
     public Long getId() {
         return id;
@@ -31,11 +32,11 @@ public class PlanDeControle {
     }
 
     public String getName() {
-        return name;
+        return PCname;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.PCname = name;
     }
 
     public Produit getProduit() {

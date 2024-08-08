@@ -6,7 +6,6 @@ import java.util.List;
 @Entity
 @Table(name = "ligne_de_controle")
 public class LigneDeControle {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
