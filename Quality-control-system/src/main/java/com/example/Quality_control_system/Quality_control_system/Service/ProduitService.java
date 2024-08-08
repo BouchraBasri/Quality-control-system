@@ -9,8 +9,8 @@ import java.util.List;
 @Service
 public class ProduitService {
     private final ProduitRepository produitRepository;
-    public ProduitService(ProduitRepository produitRepository) {
 
+    public ProduitService(ProduitRepository produitRepository) {
         this.produitRepository = produitRepository;
     }
 
@@ -24,5 +24,17 @@ public class ProduitService {
 
     public void deleteProduit(Long id) {
         produitRepository.deleteById(id);
+    }
+
+    public void updateProduit(Long id, Produit produit) {
+        Produit existingProduit = produitRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Produit not found with id: " + id));
+        existingProduit.setName(produit.getName());
+        produitRepository.save(existingProduit);
+    }
+
+    public Produit getProduitById(Long id) {
+        return produitRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Produit not found with id: " + id));
     }
 }
