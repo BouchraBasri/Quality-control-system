@@ -28,11 +28,11 @@ public class LigneDeControle {
         this.id = id;
     }
 
-    public String getCheckName() {
+    public String getName() {
         return checkName;
     }
 
-    public void setCheckName(String checkName) {
+    public void setName(String checkName) {
         this.checkName = checkName;
     }
 

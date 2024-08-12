@@ -22,11 +22,11 @@ public class ParametreAnalyse {
         this.id = id;
     }
 
-    public String getParameterName() {
+    public String getName() {
         return parameterName;
     }
 
-    public void setParameterName(String parameterName) {
+    public void setName(String parameterName) {
         this.parameterName = parameterName;
     }
 

@@ -25,11 +25,11 @@ public class UniteDeMesure {
         this.id = id;
     }
 
-    public String getUnitName() {
+    public String getName() {
         return unitName;
     }
 
-    public void setUnitName(String unitName) {
+    public void setName(String unitName) {
         this.unitName = unitName;
     }
 
