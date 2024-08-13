@@ -1,8 +1,16 @@
 package com.example.Quality_control_system.Quality_control_system.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
+@ToString
+@Data
 @Table(name = "parametre_analyse")
 public class ParametreAnalyse {
 
@@ -13,28 +21,4 @@ public class ParametreAnalyse {
     private String parameterName;
     private String acceptableRange;
 
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return parameterName;
-    }
-
-    public void setName(String parameterName) {
-        this.parameterName = parameterName;
-    }
-
-    public String getAcceptableRange() {
-        return acceptableRange;
-    }
-
-    public void setAcceptableRange(String acceptableRange) {
-        this.acceptableRange = acceptableRange;
-    }
 }

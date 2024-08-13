@@ -30,7 +30,7 @@ public class LigneService {
     public void updateLigneDeControle(Long id, LigneDeControle ligneDeControle) {
         LigneDeControle existingLigneDeControle = ligneRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Ligne De Controle not found with id: " + id));
-        existingLigneDeControle.setName(ligneDeControle.getName());
+        //existingLigneDeControle.setName(ligneDeControle.getName());
         ligneRepository.save(existingLigneDeControle);
     }
 

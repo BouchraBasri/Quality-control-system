@@ -2,8 +2,16 @@ package com.example.Quality_control_system.Quality_control_system.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import lombok.*;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
+@ToString
+@Data
 @Table(name = "execution_pc")
 public class ExecutionPC {
     @Id
@@ -17,35 +25,5 @@ public class ExecutionPC {
     @JoinColumn(name = "plan_de_controle_id", referencedColumnName = "id")
     private PlanDeControle planDeControle;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(LocalDateTime startDate) {
-        this.startDate = startDate;
-    }
-
-    public LocalDateTime getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(LocalDateTime endDate) {
-        this.endDate = endDate;
-    }
-
-    public PlanDeControle getPlanDeControle() {
-        return planDeControle;
-    }
-
-    public void setPlanDeControle(PlanDeControle planDeControle) {
-        this.planDeControle = planDeControle;
-    }
 }

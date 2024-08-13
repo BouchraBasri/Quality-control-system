@@ -9,7 +9,6 @@ import java.util.List;
 @Service
 public class ParametreService {
     private final ParametreRepository parametreRepository;
-
     public ParametreService(ParametreRepository parametreRepository) {
 
         this.parametreRepository = parametreRepository;
@@ -30,7 +29,7 @@ public class ParametreService {
     public void updateParametre(Long id, ParametreAnalyse parametreAnalyse) {
         ParametreAnalyse existingParametre = parametreRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Parametre Analyse not found with id: " + id));
-        existingParametre.setName(parametreAnalyse.getName());
+        //existingParametre.setName(parametreAnalyse.getName());
         parametreRepository.save(existingParametre);
     }
 

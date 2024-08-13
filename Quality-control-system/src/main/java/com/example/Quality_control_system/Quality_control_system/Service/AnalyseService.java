@@ -30,7 +30,7 @@ public class AnalyseService {
     public void updateAnalyse(Long id, AnalyseDeLigne analysedeligne) {
         AnalyseDeLigne existingAnalyse = analyseRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Analyse De Ligne not found with id: " + id));
-        existingAnalyse.setName(analysedeligne.getName());
+        //existingAnalyse.setName(analysedeligne.getName());
         analyseRepository.save(existingAnalyse);
     }
 

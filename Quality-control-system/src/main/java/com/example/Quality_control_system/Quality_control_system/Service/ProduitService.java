@@ -30,7 +30,7 @@ public class ProduitService {
     public void updateProduit(Long id, Produit produit) {
         Produit existingProduit = produitRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Produit not found with id: " + id));
-        existingProduit.setName(produit.getName());
+        //existingProduit.setName(produit.getName());
         produitRepository.save(existingProduit);
     }
 

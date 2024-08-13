@@ -30,7 +30,7 @@ public class UniteService {
     public void updateUnites(Long id, UniteDeMesure uniteDeMesure) {
         UniteDeMesure existinguniteDeMesure = uniteRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("unite De Mesure not found with id: " + id));
-        existinguniteDeMesure.setName(uniteDeMesure.getName());
+        //existinguniteDeMesure.setName(uniteDeMesure.getUnitName());
         uniteRepository.save(existinguniteDeMesure);
     }
 

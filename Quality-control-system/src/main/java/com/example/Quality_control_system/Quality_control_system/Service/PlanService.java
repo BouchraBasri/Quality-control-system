@@ -30,7 +30,7 @@ public class PlanService {
     public void updatePlan(Long id, PlanDeControle planDeControle) {
         PlanDeControle existingPlan = planRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Plan De Controle not found with id: " + id));
-        existingPlan.setName(planDeControle.getName());
+        //existingPlan.setName(planDeControle.getPCname());
         planRepository.save(existingPlan);
     }
 
