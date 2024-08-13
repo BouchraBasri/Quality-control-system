@@ -1,5 +1,6 @@
 package com.example.Quality_control_system.Quality_control_system.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -27,10 +28,12 @@ public class ExecutionAnalyseLignePC {
 
     @ManyToOne
     @JoinColumn(name = "execution_ligne_pc_id", referencedColumnName = "id")
+    @JsonBackReference
     private ExecutionLignePC executionLignePC;
 
     @OneToOne
     @JoinColumn(name = "analyse_de_ligne_id", referencedColumnName = "id")
+    @JsonBackReference
     private AnalyseDeLigne analyseDeLigne;
 }
 

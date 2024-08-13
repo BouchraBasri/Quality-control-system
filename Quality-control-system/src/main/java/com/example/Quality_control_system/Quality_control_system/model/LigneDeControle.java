@@ -1,5 +1,6 @@
 package com.example.Quality_control_system.Quality_control_system.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -23,10 +24,14 @@ public class LigneDeControle {
 
     @ManyToOne
     @JoinColumn(name = "plan_de_controle_id", nullable = false)
+    @JsonBackReference
     private PlanDeControle planDeControle;
 
-    @OneToMany(mappedBy = "ligneDeControle", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "ligneDeControle")
     private List<AnalyseDeLigne> analyses;
+
+    @OneToOne(mappedBy = "LigneDeControle")
+    private ExecutionLignePC executionlignePCs;
 
 
 

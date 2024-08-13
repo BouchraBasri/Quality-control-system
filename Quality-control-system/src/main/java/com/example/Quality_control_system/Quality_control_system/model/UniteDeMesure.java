@@ -21,7 +21,7 @@ public class UniteDeMesure {
 
     private String unitName;
 
-    @OneToMany(mappedBy = "uniteDeMesure", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "uniteDeMesure")
     private List<AnalyseDeLigne> analyses;
 
 }

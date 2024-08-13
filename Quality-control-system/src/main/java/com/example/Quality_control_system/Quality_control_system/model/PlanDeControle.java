@@ -31,8 +31,11 @@ public class PlanDeControle {
     @JsonBackReference
     private Produit produit;
 
-    @OneToMany(mappedBy = "planDeControle", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "planDeControle")
     private List<LigneDeControle> ligneDeControles;
+
+    @OneToOne(mappedBy = "planDeControle")
+    private ExecutionPC executionsPC;
 
 }
 

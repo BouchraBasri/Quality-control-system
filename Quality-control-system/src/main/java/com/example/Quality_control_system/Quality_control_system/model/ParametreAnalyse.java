@@ -21,4 +21,7 @@ public class ParametreAnalyse {
     private String parameterName;
     private String acceptableRange;
 
+    @OneToOne(mappedBy = "parametreAnalyse")
+    private AnalyseDeLigne analyseDeLigne;
+
 }

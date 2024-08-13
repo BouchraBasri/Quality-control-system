@@ -1,7 +1,10 @@
 package com.example.Quality_control_system.Quality_control_system.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
+
 import lombok.*;
 
 @Entity
@@ -23,7 +26,11 @@ public class ExecutionPC {
 
     @OneToOne
     @JoinColumn(name = "plan_de_controle_id", referencedColumnName = "id")
-    private PlanDeControle planDeControle;
+    @JsonBackReference
+    private PlanDeControle planDeControles;
+
+    @OneToMany(mappedBy = "executionpc")
+    private List<ExecutionLignePC> executionlignePCs;
 
 
 }
