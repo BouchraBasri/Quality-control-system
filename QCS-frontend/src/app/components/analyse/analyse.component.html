@@ -1,0 +1,52 @@
+<div class="main-panel">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-lg-9 ">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Ajouter un produit</h4>
+  <!--            <form [formGroup]= "productFormGroup" (ngSubmit)="onSaveProduct()">-->
+                <div class="input-container">
+                  <div class="inputInfo">
+                    <input id="AnalyseName" placeholder="Nom"  class="input-field" formControlName="name" type="text">
+                    <label class="input-label" for="AnalyseName">Nom </label>
+                  </div>
+                  <div class="inputInfo">
+                    <input placeholder="MAX"  class="input-field" formControlName="max" type="text">
+                    <label class="input-label">MAX</label>
+                  </div>
+                  <div class="inputInfo">
+                    <input placeholder="MIN"  class="input-field" formControlName="min" type="text">
+                    <label class="input-label   ">MIN</label>
+                  </div>
+                  <button class="btn btn-success"  type="submit" >Valide</button>
+                </div>
+  <!--            </form>-->
+              <br>
+              <br>
+              <div class="table-responsive pt-3">
+                <h4 class="card-title">Liste des produits</h4>
+                <table class="table table-bordered">
+  
+                  <thead>
+                  <tr >
+                    <th>#</th>
+                    <th>Nom</th>
+                    <th>MAX</th>
+                    <th>MIN</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+  
+  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
