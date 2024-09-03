@@ -5,6 +5,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProduitComponent } from './produit/produit.component';
 import { PlanDeControleComponent } from './plan-de-controle/plan-de-controle.component';
 import { LigneDeControleComponent } from './ligne-de-controle/ligne-de-controle.component';
+import { AnalyseComponent } from './analyse/analyse.component';
+import { AnalyseDeLigneComponent } from './analyse-de-ligne/analyse-de-ligne.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -12,7 +14,9 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'produit', component: ProduitComponent},
   {path: 'plan-de-controle', component: PlanDeControleComponent},
-  {path: 'ligne-de-controle', component: LigneDeControleComponent}
+  {path: 'ligne-de-controle', component: LigneDeControleComponent},
+  {path: 'analyse', component: AnalyseComponent},
+  {path: 'analyse-de-ligne', component: AnalyseDeLigneComponent}
 ];
 
 @NgModule({

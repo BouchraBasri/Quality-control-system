@@ -2,11 +2,11 @@
     <h1>Ajouter Un Produit</h1>
     <div class="form-group">
       <label for="name">Nom du produit</label>
-      <input type="text" id="name" class="form-control" [(ngModel)]="produit.name">
+      <input type="text" id="name" class="form-control" [(ngModel)]="produit.name" placeholder="Nom du produit">
     </div>
     <div class="form-group">
       <label for="category">Catégorie du produit</label>
-      <input type="text" id="category" class="form-control" [(ngModel)]="produit.category">
+      <input type="text" id="category" class="form-control" [(ngModel)]="produit.category" placeholder="Catégorie du produit">
     </div>
     <button class="btn btn-success" (click)="addProduit()">Valide</button>
     <h2>Liste Des Produits</h2>
@@ -26,4 +26,4 @@
         </tr>
       </tbody>
     </table>
-  </div>
+</div>

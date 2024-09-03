@@ -20,6 +20,7 @@ export class LigneDeControleComponent {
       });
       this.newLigneDeControle = '';
       this.selectedProduit = '';
+      this.selectedPlanDeControle = ''
     } else {
       alert('Please fill in both fields.');
     }

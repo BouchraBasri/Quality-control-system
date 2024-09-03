@@ -11,6 +11,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProduitComponent } from './produit/produit.component';
 import { PlanDeControleComponent } from './plan-de-controle/plan-de-controle.component';
 import { LigneDeControleComponent } from './ligne-de-controle/ligne-de-controle.component';
+import { AnalyseComponent } from './analyse/analyse.component';
+import { AnalyseDeLigneComponent } from './analyse-de-ligne/analyse-de-ligne.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LigneDeControleComponent } from './ligne-de-controle/ligne-de-controle.
     DashboardComponent,
     ProduitComponent,
     PlanDeControleComponent,
-    LigneDeControleComponent
+    LigneDeControleComponent,
+    AnalyseComponent,
+    AnalyseDeLigneComponent
   ],
   imports: [
     BrowserModule,

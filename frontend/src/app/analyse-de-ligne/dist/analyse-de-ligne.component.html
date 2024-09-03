@@ -1,10 +1,4 @@
 <div class="container">
-    <h1>Ajouter Une Ligne De Controle</h1>
-    <div class="form-group">
-      <label for="ligneDeControle">Ligne de controle</label>
-      <input type="text" class="form-control" id="planDeControle" [(ngModel)]="newLigneDeControle" placeholder="Ligne de controle">
-    </div>
-  
     <div class="form-group">
       <label for="produit">Le produit</label>
       <select class="form-control" id="produit" [(ngModel)]="selectedProduit">
@@ -20,26 +14,33 @@
         <option value="AutreAction">Autre action</option>
         <option value="AutreChoseIci">Autre chose ici</option>
       </select>
+      <label for="lignedecontrole">La Ligne de controle</label>
+      <select class="form-control" id="ligneDeControle" [(ngModel)]="selectedLigneDeControle">
+        <option value="" disabled selected>sélectionner une Ligne de controle</option>
+        <option value="Action">Action</option>
+        <option value="AutreAction">Autre action</option>
+        <option value="AutreChoseIci">Autre chose ici</option>
+      </select>
     </div>
   
-    <button class="btn btn-success" (click)="addLigneDeControle()">Valide</button>
+    <button class="btn btn-success" (click)="add()">Valide</button>
   
-    <h2>Liste Des Produits</h2>
+    <h2>Liste</h2>
     <table class="table">
       <thead>
         <tr>
           <th>#</th>
-          <th>Ligne de controle</th>
           <th>Produit</th>
           <th>Plan de controle</th>
+          <th>Ligne de controle</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of ligneDeControleList; let i = index">
+        <tr *ngFor="let item of List; let i = index">
           <td>{{ i + 1 }}</td>
-          <td>{{ item.ligneDeControle }}</td>
           <td>{{ item.produit }}</td>
           <td>{{ item.planDeControle }}</td>
+          <td>{{ item.ligneDeControle }}</td>
         </tr>
       </tbody>
     </table>
