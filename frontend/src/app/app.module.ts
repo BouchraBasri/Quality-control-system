@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProduitComponent } from './produit/produit.component';
 import { PlanDeControleComponent } from './plan-de-controle/plan-de-controle.component';
+import { LigneDeControleComponent } from './ligne-de-controle/ligne-de-controle.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PlanDeControleComponent } from './plan-de-controle/plan-de-controle.com
     LoginComponent,
     DashboardComponent,
     ProduitComponent,
-    PlanDeControleComponent
+    PlanDeControleComponent,
+    LigneDeControleComponent
   ],
   imports: [
     BrowserModule,

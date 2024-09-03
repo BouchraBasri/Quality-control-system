@@ -16,8 +16,6 @@ export class PlanDeControleComponent {
         planDeControle: this.newPlanDeControle,
         produit: this.selectedProduit
       });
-
-      // Clear form fields after adding
       this.newPlanDeControle = '';
       this.selectedProduit = '';
     } else {
