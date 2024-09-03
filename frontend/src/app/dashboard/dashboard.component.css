@@ -1,8 +1,10 @@
 .dashboard {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 200px;
+
+    justify-content: center;
 }
   
 .dashboard-item {

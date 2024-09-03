@@ -15,8 +15,8 @@ export class HeaderComponent implements OnInit{
   ngOnInit(): void {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        // Check if the current route is the login page
         this.showSidebarToggle = !this.router.url.includes('/login');
+        this.showSidebarToggle = !this.router.url.includes('/dashboard');
       }
     });
   }

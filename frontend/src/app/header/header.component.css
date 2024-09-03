@@ -1,6 +1,6 @@
 .logo {
-        width: 125px; 
-        height: auto;
+  width: 125px; 
+  height: auto;
 }
 
 .header {
@@ -8,32 +8,53 @@
   }
 
 .sidebar-toggle {
-    position: fixed; /* Ensure the toggle button is always visible */
-    top: 10px; /* Adjust this value to position it closer to the top */
-    right: 10px; /* Position it on the right side */
-    background-color: white; /* White background */
-    color: #020258; /* Blue sign */
-    font-size: 24px; /* Size of the three-line menu icon */
+    position: fixed;
+    top: 10px;
+    right: 10px; 
+    background-color: white; 
+    color: #020258; 
+    font-size: 24px; 
     cursor: pointer;
-    z-index: 1000; /* Ensure it's above other elements */
+    z-index: 1000; 
     padding: 10px;
     border: none;
 }
   
-  .sidebar {
-    position: fixed;
-    top: 0; /* Aligns the sidebar with the top of the page */
-    right: -250px; /* Initially hidden */
-    width: 250px;
-    height: 100%;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 10px; /* Reduced padding to bring content closer to the top */
-    color: white;
-  }
+.sidebar {
+  position: fixed;
+  top: 100px; 
+  right: -250px; 
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px; 
+  color: #020258;
+  font-size: large;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 20px; 
+  background-color: #020258; 
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a {
+  text-decoration: none; 
+  color: white;
+}
   
 .sidebar-visible {
-    right: 0; /* Move the sidebar into view */
+    right: 0; 
 }
   

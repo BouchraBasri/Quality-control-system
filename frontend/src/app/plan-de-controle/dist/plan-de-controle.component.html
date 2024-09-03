@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Ajouter Un Plan De Controle</h1>
+    <div class="form-group">
+      <label for="planDeControle">Plan de contrôle</label>
+      <input type="text" class="form-control" id="planDeControle" [(ngModel)]="newPlanDeControle" placeholder="Plan de contrôle">
+    </div>
+  
+    <div class="form-group">
+      <label for="produit">Le produit</label>
+      <select class="form-control" id="produit" [(ngModel)]="selectedProduit">
+        <option value="" disabled selected>Select a product</option>
+        <option value="Action">Action</option>
+        <option value="AnotherAction">Another action</option>
+        <option value="SomethingElse">Something else here</option>
+      </select>
+    </div>
+  
+    <button class="btn btn-success" (click)="addPlanDeControle()">Valide</button>
+  
+    <h2>Liste Des Produits</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Plan de contrôle</th>
+          <th>Produit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of planDeControleList; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.planDeControle }}</td>
+          <td>{{ item.produit }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

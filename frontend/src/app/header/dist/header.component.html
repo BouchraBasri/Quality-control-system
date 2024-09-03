@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src=".\assets\images\téléchargement.png" alt="Copag" class="logo">
-          </a>
+            <img src=".\assets\images\téléchargement.png" alt="Copag" class="logo">        
+        </a>
     </div>
     <div class="header">
         <button *ngIf="showSidebarToggle" class="sidebar-toggle" (click)="toggleSidebar()">
@@ -11,9 +11,11 @@
         <div [class.sidebar-visible]="isSidebarVisible" class="sidebar">
             <div [class.sidebar-visible]="isSidebarVisible" class="sidebar">    
                 <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Produit</a></li>
+                    <li><a href="#">Plan De Controle</a></li>
+                    <li><a href="#">Ligne De Controle</a></li>
+                    <li><a href="#">Analyse</a></li>
+                    <li><a href="#">Analyse De Ligne</a></li>
                 </ul>
             </div>
         </div>
