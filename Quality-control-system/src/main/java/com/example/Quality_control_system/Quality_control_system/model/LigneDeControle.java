@@ -30,7 +30,7 @@ public class LigneDeControle {
     @OneToMany(mappedBy = "ligneDeControle")
     private List<AnalyseDeLigne> analyses;
 
-    @OneToOne(mappedBy = "LigneDeControle")
+    @OneToOne(mappedBy = "ligneDeControle")
     private ExecutionLignePC executionlignePCs;
 
 

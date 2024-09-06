@@ -36,7 +36,7 @@ public class AnalyseDeLigne {
     @JsonBackReference
     private ParametreAnalyse parametreAnalyse;
 
-    @OneToOne(mappedBy = "analysedeligne")
+    @OneToOne(mappedBy = "analyseDeLigne")
     private ExecutionAnalyseLignePC executionanalyselignePC;
 
 }

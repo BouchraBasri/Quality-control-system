@@ -27,9 +27,9 @@ public class ExecutionPC {
     @OneToOne
     @JoinColumn(name = "plan_de_controle_id", referencedColumnName = "id")
     @JsonBackReference
-    private PlanDeControle planDeControles;
+    private PlanDeControle planDeControle;
 
-    @OneToMany(mappedBy = "executionpc")
+    @OneToMany(mappedBy = "executionPC")
     private List<ExecutionLignePC> executionlignePCs;
 
 

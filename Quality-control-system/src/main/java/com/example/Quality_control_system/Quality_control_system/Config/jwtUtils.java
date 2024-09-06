@@ -1,4 +1,4 @@
-package com.example.Quality_control_system.Quality_control_system.Config;
+/*package com.example.Quality_control_system.Quality_control_system.Config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -59,4 +59,4 @@ public class JwtUtils {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
-}
+}*/

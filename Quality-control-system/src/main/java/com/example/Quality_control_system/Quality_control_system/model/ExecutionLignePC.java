@@ -35,7 +35,7 @@ public class ExecutionLignePC {
     @JsonBackReference
     private LigneDeControle ligneDeControle;
 
-    @OneToMany(mappedBy = "executionlignepc")
+    @OneToMany(mappedBy = "executionLignePC")
     private List<ExecutionAnalyseLignePC> executionanalyselignePCs;
 
 

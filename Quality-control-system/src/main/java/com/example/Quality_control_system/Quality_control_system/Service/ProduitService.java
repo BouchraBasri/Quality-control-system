@@ -19,8 +19,8 @@ public class ProduitService {
         return produitRepository.findAll();
     }
 
-    public void saveProduit(Produit produit) {
-        produitRepository.save(produit);
+    public Produit saveProduit(Produit produit) {
+        return produitRepository.save(produit);
     }
 
     public void deleteProduit(Long id) {

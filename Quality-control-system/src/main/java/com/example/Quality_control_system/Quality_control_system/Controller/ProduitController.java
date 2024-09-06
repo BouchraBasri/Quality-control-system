@@ -3,13 +3,14 @@ package com.example.Quality_control_system.Quality_control_system.Controller;
 import com.example.Quality_control_system.Quality_control_system.Service.ProduitService;
 import com.example.Quality_control_system.Quality_control_system.model.Produit;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "produit")
+@RequestMapping("/api/v1/produit")
 public class ProduitController {
     private final ProduitService produitService;
 
@@ -31,9 +32,10 @@ public class ProduitController {
 
     @PostMapping
     public ResponseEntity<Produit> createProduit(@RequestBody Produit produit) {
-        produitService.saveProduit(produit);
-        return ResponseEntity.ok(produit);
+        Produit savedProduit = produitService.saveProduit(produit);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedProduit);
     }
+
 
     @PutMapping("/{id}")
     public ResponseEntity<Produit> updateProduit(@PathVariable Long id, @RequestBody Produit produit) {

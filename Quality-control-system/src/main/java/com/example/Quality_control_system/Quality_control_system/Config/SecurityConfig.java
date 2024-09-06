@@ -1,4 +1,4 @@
-package com.example.Quality_control_system.Quality_control_system.Config;
+/*package com.example.Quality_control_system.Quality_control_system.Config;
 
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
@@ -21,4 +21,4 @@ public class SecurityConfig {
         http.httpBasic(withDefaults());
         return http.build();
     }
-}
+}*/

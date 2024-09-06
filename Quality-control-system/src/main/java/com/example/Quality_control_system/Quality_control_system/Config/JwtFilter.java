@@ -1,4 +1,4 @@
-package com.example.Quality_control_system.Quality_control_system.Config;
+/*package com.example.Quality_control_system.Quality_control_system.Config;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -16,7 +16,7 @@ import java.io.IOException;
 
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 
-@Component
+/*@Component
 public class JwtFilter extends OncePerRequestFilter {
     private final MapReactiveUserDetailsService reactiveUserDetailsService;
 
@@ -47,4 +47,4 @@ public class JwtFilter extends OncePerRequestFilter {
             }
         }
     }
-}
+}*/

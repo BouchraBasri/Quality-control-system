@@ -20,6 +20,7 @@ public class Produit {
     private Long id;
 
     private String name;
+    private String categorie;
 
     @OneToMany(mappedBy = "produit")
     private List<PlanDeControle> planDeControles;
